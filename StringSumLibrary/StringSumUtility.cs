@@ -5,6 +5,10 @@ namespace StringSumLibrary
     {
         public static string StringSum(string number1, string number2)
         {
+            if(number1 == null || number2 == null)
+            {
+                throw new ArgumentNullException();
+            }
             int TryParseOrZero(string input)
             {
                 return int.TryParse(input, out var result) ? result : 0;
